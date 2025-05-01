@@ -13,8 +13,8 @@
   .bubble {
     position: absolute;
     bottom: -5vh;
-    width: 7rem;
-    height: 7rem;
+    width: 2rem;
+    height: 2rem;
     background: rgba(200, 150, 255, 0.3);
     border-radius: 50%;
     animation: floatUp linear infinite;
