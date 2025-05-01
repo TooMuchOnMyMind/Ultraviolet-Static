@@ -3,29 +3,44 @@
 body {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   margin: 0;
-  background: #111;
+  background: #4f8cff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: #ffffff;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* FADE-IN EFFECT */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .fa-magnifying-glass {
-  color: white;
+  color: #ffffff;
 }
 
 .flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .header-center {
-  align-items: center;
   flex-direction: column;
-  margin-top: 10%;
+  margin-top: 10vh;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .left-margin {
-  margin: 0px 16px;
+  margin: 0 1rem;
 }
 
 #uv-frame {
@@ -35,34 +50,43 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #111;
+  background-color: #ffffff;
 }
 
 #uv-error {
-  color: #ff6666 !important;
+  color: #ff4444 !important;
   white-space: pre-wrap;
 }
 
 #uv-error-code {
-  font-size: 12px;
-  color: #fff;
+  font-size: 0.75rem;
+  color: #ffffff;
   font-family: "Courier New", Courier, monospace;
 }
 
+/* BUTTON STYLE */
 #uv-register-sw {
   color: white;
-  background: #555555;
+  background: #ffffff;
   cursor: pointer;
   outline: none;
   border: none;
-  border-radius: 6px;
-  padding: 16px 20px;
-  line-height: 16px;
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  line-height: 1rem;
   display: none;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+#uv-register-sw:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.3);
 }
 
 #uv-register-sw:active {
-  background: #333333;
+  background: #333;
+  transform: scale(0.95);
 }
 
 #uv-register-sw.show {
@@ -70,17 +94,35 @@ body {
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
+  width: 50vw;
+  height: 50vw;
+  max-width: 9rem;
+  max-height: 9rem;
+  filter: drop-shadow(0 0.3125rem 0.625rem rgba(0, 0, 0, 0.3));
+  animation: popIn 0.8s ease-in-out;
+}
+
+/* POP-IN EFFECT */
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .logo-wrapper .text {
-  font-size: 75px;
-  color: #fff;
+  font-size: 4.5vw;
+  font-size: 4rem;
+  color: #ffffff;
+  text-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 .logo-wrapper h1 {
-  color: white;
+  color: #ffffff;
 }
 
 footer {
@@ -88,8 +130,8 @@ footer {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  line-height: 30px;
-  margin-bottom: 20px;
+  line-height: 2rem;
+  margin-bottom: 2vh;
 }
 
 footer > div {
@@ -97,72 +139,87 @@ footer > div {
   justify-content: left;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  margin-bottom: 1.5vh;
 }
 
 footer a,
 footer span {
-  margin: 0 15px;
+  margin: 0 1vw;
   text-decoration: none;
-  color: #fff;
-  font-size: 15px;
-}
-
-footer a {
-  cursor: pointer;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
 }
 
 footer a:hover {
   text-decoration: underline;
+  color: #dfe9ff;
 }
 
 .desc p {
-  width: 560px;
-  color: rgba(253, 253, 253, 0.514);
+  width: 50vw;
+  max-width: 35rem;
+  color: rgb(255, 255, 255);
+  animation: fadeIn 1.5s ease-in-out;
 }
 
+/* SEARCH BAR */
 #uv-address {
   background: none;
   font-family: inherit;
-  padding: 0px 17px;
-  height: 48px;
-  border: 1px solid rgb(255, 255, 255, 0.2);
-  color: var(--text-color);
-  border-radius: 3px;
+  padding: 0 1rem;
+  height: 3rem;
+  border: 0.125rem solid rgb(7, 53, 255);
+  border-radius: 3rem;
   outline: none;
-  width: 350px;
-  margin-top: 5px;
-  border-radius: 50px;
-  color: #fff;
-  transition: border-radius 0.1s;
+  width: 30vw;
+  max-width: 22rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+  transition: border-radius 0.2s, border-color 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
 }
 
 #uv-address:focus {
-  border: 1px solid rgba(253, 253, 253, 0.514);
-  border-radius: 6px;
+  border: 0.125rem solid rgb(255, 255, 255);
+  border-radius: 0.375rem;
+  box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.3);
 }
 
+/* CREDIT BOX */
 .credit {
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 0.625rem;
+  padding: 0.625rem;
   display: block;
-  border: #fff 1px solid;
-  color: #fff;
+  border: #ffffff 0.0625rem solid;
+  color: #ffffff;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 15px;
+  margin-bottom: 1.5vh;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.credit:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.375rem 0.9375rem rgba(0, 0, 0, 0.3);
 }
 
 .credit label {
   margin-left: auto;
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 .credit a,
 .credit label {
-  color: white;
+  color: #dfe9ff;
   text-decoration: underline;
   text-align: right;
+  transition: color 0.3s ease-in-out;
+}
+
+.credit a:hover {
+  color: #ffffff;
 }
 
 .credit pre {
@@ -181,4 +238,38 @@ footer a:hover {
 
 .credit input:checked ~ pre {
   display: block;
+}
+
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.desc p {
+  max-width: 35rem;
+}
+
+#uv-address {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 0.125rem solid #4f8cff;
+  outline: none;
+  padding: 0.650rem 1.5rem;
+  border-radius: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+#uv-address:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1rem rgba(3, 43, 255, 0.6);
+}
+
+/* Focus effect */
+#uv-address:focus {
+  border-color: #032bff;
+  box-shadow: 0 0 1.25rem rgba(3, 43, 255, 0.8);
 }
