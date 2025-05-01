@@ -109,3 +109,76 @@
   
   
   
+
+  /* CREDIT BOX */
+.credit {
+    border-radius: 0.625rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.5vh;
+    border: 1px solid #bfaaff;
+    color: #e0d9ff;
+    background-color: rgba(25, 12, 51, 0.6);
+    box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .credit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1.25rem rgba(191, 170, 255, 0.3);
+  }
+  
+  .credit label {
+    color: #c7b3ff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 1rem;
+  }
+  
+  .credit label:hover {
+    color: #ffffff;
+  }
+  
+  .credit input {
+    display: none;
+  }
+  
+  .credit pre {
+    display: none;
+    width: 100%;
+    color: #ffffff;
+    font-family: "Courier New", Courier, monospace;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .credit input:checked ~ pre {
+    display: block;
+  }
+  
+  .credit label::after {
+    content: "show credits";
+    font-size: 1rem;
+  }
+  
+  .credit input:checked + label::after {
+    content: "hide credits";
+  }
+  
+  .credit pre strong {
+    color: #d6b3ff;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
