@@ -160,6 +160,7 @@ body {
   font-size: 4rem;
   color: #d6b3ff;
   text-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.6);
+  padding: 2%;
   animation: slideUp 1.2s ease-out;
 }
 
@@ -308,14 +309,3 @@ footer a:hover {
 /* ANIMATION FOR FLOATING UP */
 
 
-.Frame {
-  position: fixed;
-  bottom: 20%;  /* 20px from the bottom of the screen */
-  left: 20%;   /* 20px from the right edge of the screen */
-  width: 300px;  /* Set the desired width */ /* Set the desired height */
-  border: 2px solid rgba(255, 255, 255, 0.1);  /* Optional: add border for visibility */
-  border-radius: 10px; /* Optional: add rounded corners */
-  display: block; /* Ensure iframe is visible */
-  z-index: 999; /* Ensure iframe stays above other content */
-  opacity: 0.9; /* Slight transparency */
-}
