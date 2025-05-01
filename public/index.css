@@ -226,7 +226,9 @@ footer a:hover {
   padding: 0.650rem 1.5rem;
   border-radius: 1.5rem;
   width: 40vw;
-  max-width: 22rem;
+  max-width: 30rem;
+  height: 20vw;
+  max-height: 15rem;
   font-family: inherit;
   margin-top: 0.5rem;
   transition: all 0.3s ease-in-out;
