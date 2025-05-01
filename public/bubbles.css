@@ -1,13 +1,7 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+
   body {
-    min-height: 100vh;
+    
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
-    overflow: hidden;
   }
   
   .stars {
