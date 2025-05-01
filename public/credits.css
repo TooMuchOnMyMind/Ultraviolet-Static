@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(360deg, hsla(262, 100%, 50%, 1) 0%, hsla(262, 100%, 18%, 1) 0%, hsla(271, 100%, 27%, 1) 100%);
+  min-height: 100vh;
+  color: #e0d9ff;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Logo & Title */
+.logo-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+  animation: slideUp 1.5s ease-in-out;
+}
+
+.logo-wrapper h1 {
+  font-size: 2.5rem;
+  color: #e6d4ff;
+  text-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.6);
+}
+
+/* Description Text */
+.desc {
+  margin: 2rem;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.desc span {
+  font-size: 1.1rem;
+  color: #d4c2ff;
+}
+
+/* Credit Box */
+.credit {
+  background-color: rgba(25, 12, 51, 0.6);
+  border: 1px solid #bfaaff;
+  border-radius: 0.625rem;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.5);
+  animation: popIn 1.2s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.credit:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.5rem 1.25rem rgba(191, 170, 255, 0.3);
+}
+
+/* Toggle Button Style */
+.credit label {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #c7b3ff;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.credit label:hover {
+  color: #ffffff;
+}
+
+/* Hide checkbox */
+.credit input[type="checkbox"] {
+  display: none;
+}
+
+/* Credits Content */
+.credit pre {
+  display: none;
+  white-space: pre-wrap;
+  color: #ffffff;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 0.5rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.credit input:checked ~ pre {
+  display: block;
+}
+
+.credit label::after {
+  content: " (show credits)";
+  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  color: #aaa0ff;
+}
+
+.credit input:checked + label::after {
+  content: " (hide credits)";
+  color: #ffffff;
+}
+
+/* Links in credits */
+.credit a {
+  color: #bfaaff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  margin-left: 1rem;
+}
+
+.credit a:hover {
+  color: #ffffff;
+}
+
