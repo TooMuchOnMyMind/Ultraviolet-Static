@@ -95,5 +95,23 @@
     animation: twinkle 6s infinite linear reverse;
   }
   
+
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100; /* Keeps it behind everything */
+    pointer-events: none; /* Allows clicks through it */
+    overflow: hidden;
+  }
+
+  body > *:not(.background-animation) {
+    position: relative;
+    z-index: 0;
+  }
+  
+  
   
   
