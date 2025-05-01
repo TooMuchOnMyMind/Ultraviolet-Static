@@ -1,24 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
 
 body {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
-  margin: 0;
-  background-size: cover;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  background: linear-gradient(360deg, hsla(262, 100%, 50%, 1) 0%, hsla(262, 100%, 18%, 1) 0%, hsla(271, 100%, 27%, 1) 100%);
   animation: fadeIn 1.2s ease-in-out;
   overflow-x: hidden;
-  background: hsla(262, 100%, 50%, 1);
-
-  background: linear-gradient(360deg, hsla(262, 100%, 50%, 1) 0%, hsla(262, 100%, 18%, 1) 0%, hsla(271, 100%, 27%, 1) 100%);
-
-  background: -moz-linear-gradient(360deg, hsla(262, 100%, 50%, 1) 0%, hsla(262, 100%, 18%, 1) 0%, hsla(271, 100%, 27%, 1) 100%);
-
-  background: -webkit-linear-gradient(360deg, hsla(262, 100%, 50%, 1) 0%, hsla(262, 100%, 18%, 1) 0%, hsla(271, 100%, 27%, 1) 100%);
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#5D00FF", endColorstr="#21005A", GradientType=1 );
 }
+
 
 /* Fade in */
 @keyframes fadeIn {
@@ -76,10 +68,14 @@ body {
 }
 
 .header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   margin-top: 10vh;
   animation: slideUp 1.5s ease-out;
 }
+
 
 .left-margin {
   margin: 0 1rem;
@@ -210,6 +206,7 @@ footer a:hover {
   width: 100%;
   animation: fadeIn 1.8s ease-out;
 }
+
 
 .desc p {
   width: 50vw;
